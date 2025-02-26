@@ -1,0 +1,12 @@
+/* Global App Container */
+.app-container {
+  height: 100vh;
+  width: 100vw;
+  background-color: #f8f9fa;
+  /* Match index.css for consistency */
+  font-family: Arial, sans-serif;
+  display: flex;
+  /* Keep flex for sidebar + chat layout */
+}
+
+/* Remove .abc since it's redundant with app-container */

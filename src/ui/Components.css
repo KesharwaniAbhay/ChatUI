@@ -1,0 +1,54 @@
+/* styles/Components.css */
+
+.button {
+  padding: 10px 15px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.button:hover {
+  background: #2980b9;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+}
+
+.input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.custom-input {
+  flex: 1; /* Makes the input expand */
+  width: 100%; /* Ensures full width inside flex container */
+  height: 65px; /* Increase input height */
+  font-size: 20px; /* Make text larger */
+  padding: 15px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
+
+
+.custom-button {
+  height: 60px; /* Increase button height */
+  font-size: 20px; /* Make text larger */
+  padding: 15px 40px; /* Increase button padding */
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  width: 20%;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}

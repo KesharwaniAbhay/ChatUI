@@ -1,0 +1,77 @@
+.sidebar {
+  width: 17%;
+  background-color: #2a2a2a;
+  color: #ffffff;
+  padding: 24px;
+  height: 100%;
+  /* Match chat-container */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-title {
+  font-size: 35px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #e0e0e0;
+
+}
+
+.sidebar-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background-color: #4a4a4a;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 20px;
+  text-align: center;
+  transition: background-color 0.2s ease;
+}
+
+.sidebar-btn:hover {
+  background-color: #606060;
+}
+
+.reset-btn {
+  background-color: #e63946;
+  margin-top: auto; /* Pushes the button to the bottom */
+  margin-bottom: 1%;
+}
+
+.reset-btn:hover {
+  background-color: #b32d38;
+}
+
+.chat-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+}
+
+.chat-item {
+  width: 100%;
+  background-color: #3a3a3a;
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  color: #d0d0d0;
+  font-size: 19px;
+  transition: background-color 0.2s ease;
+}
+
+.chat-item:hover {
+  background-color: #505050;
+}
+
+.chat-item.active {
+  background-color: #1a73e8;
+  color: #ffffff;
+}
