@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "start": "run",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
@@ -12,6 +13,8 @@
   "dependencies": {
     "@google/generative-ai": "^0.22.0",
     "axios": "^1.7.9",
+    "express": "^4.21.2",
+    "mongoose": "^8.12.1",
     "openai": "^4.85.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import ReactMarkdown from "react-markdown";
 import useChatStore from "../store/chatStore";
-import { Input, Button, Card } from "../ui/Components";
-import ChatSidebar from "./ChatSidebar";
+import { Input, Button } from "../ui/Components";
 import "./ChatInterface.css";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
@@ -26,8 +25,8 @@ const ChatInterface = () => {
     localStorage.setItem("chatHistory", JSON.stringify(chats));
   }, [chats]);
 
-  const handleSend = useCallback(async () => {
-    if (input.trim() === "" || loading || requestLock.current) return;
+  const handleSend = useCallback(async () => {  
+    if (input.trim() === "" || loading || requestLock.current) return (alert("Enter Something!"));
 
     requestLock.current = true;
     const userMessage = input;
@@ -40,13 +39,14 @@ const ChatInterface = () => {
       const sessionHistory = currentChat
         .filter((chat) => chat.response !== "Waiting...")
         .map((chat) => `User: ${chat.message}\nAssistant: ${chat.response}`)
-        .join("\n\n");
+        .join("\n\n"); 
 
       const prompt = `${sessionHistory.length > 0 ? sessionHistory + "\n\n" : ""}User: ${userMessage}\nAssistant: (keep it short, max 1-2 sentences)`;
 
       const result = await model.generateContent(prompt);
       const botResponse = result.response.text().trim() || "No response from AI.";
       addMessage(userMessage, botResponse); // Update "Waiting..." with response
+      
     } catch (error) {
       console.error("Gemini API Error:", error);
       let errorMessage = "Failed to get a response.";
@@ -74,13 +74,17 @@ const ChatInterface = () => {
 
   return (
     <div className="chat-container">
-      <ChatSidebar />
+      {/* <ChatSidebar /> */}
       <div className="chat-content">
         <div className="chat-box">
+        <div style={{ backgroundColor: "black", color: "white", padding: "20px", borderRadius: "10px", textAlign: "center" }}>
+          <p style={{ textAlign: "center", text:"bold", fontSize:"30px" }}>This is the chat area</p>
+        </div>
+        <div style={{marginTop:"20px"}}>
           {currentChat.map((chat, index) => (
             <div key={index} className="message-wrapper user">
               <div className="user-message-wrapper">
-                <p className="user-message">You:</p>
+                <p className="user-message">You:</p>  
                 <p className="message">{chat.message}</p>
               </div>
               {chat.response !== "Waiting..." && (
@@ -106,6 +110,7 @@ const ChatInterface = () => {
               )}
             </div>
           ))}
+          </div>
         </div>
         <div className="chat-input-container">
           <Input

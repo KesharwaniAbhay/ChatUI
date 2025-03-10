@@ -1,4 +1,4 @@
-/* styles/Components.css */
+
 
 .button {
   padding: 10px 15px;
@@ -30,10 +30,10 @@
 }
 
 .custom-input {
-  flex: 1; /* Makes the input expand */
-  width: 100%; /* Ensures full width inside flex container */
-  height: 65px; /* Increase input height */
-  font-size: 20px; /* Make text larger */
+  flex: 1;
+  width: 100%; 
+  height: 65px;
+  font-size: 20px; 
   padding: 15px;
   border: 2px solid #ccc;
   border-radius: 10px;
@@ -41,9 +41,9 @@
 
 
 .custom-button {
-  height: 60px; /* Increase button height */
-  font-size: 20px; /* Make text larger */
-  padding: 15px 40px; /* Increase button padding */
+  height: 60px; 
+  font-size: 15px; 
+  padding: 15px 40px; 
   background-color: #3498db;
   color: white;
   border: none;

@@ -1,14 +1,10 @@
 import React from "react";
-import "./Components.css"; // Importing CSS file
+import "./Components.css"; 
 
 export const Button = ({ onClick, children, className }) => (
   <button onClick={onClick} className={`custom-button ${className}`}>
     {children}
   </button>
-);
-
-export const Card = ({ children }) => (
-  <div className="custom-card">{children}</div>
 );
 
 export const Input = ({ value, onChange, onKeyDown }) => (

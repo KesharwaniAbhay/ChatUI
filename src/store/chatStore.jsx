@@ -28,6 +28,7 @@ const useChatStore = create((set) => ({
         currentChat: updatedChats[state.activeChatIndex],
       };
     }),
+
   saveChat: () =>
     set((state) => ({
       chats: [...state.chats, []],
@@ -44,7 +45,7 @@ const useChatStore = create((set) => ({
       chats: [[]],
       currentChat: [],
       activeChatIndex: 0,
-    }),
+    }),   
   setChatHistory: (history) =>
     set(() => ({
       chats: Array.isArray(history) && history.length > 0 ? history : [[]],
